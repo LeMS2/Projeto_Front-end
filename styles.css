@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0FFF0;
+    position: relative;
+
+}
+
+
+h1, h2, h3 {
+    color: #FF0000;
+    text-align: center;
+    padding: 8px;
+    text-decoration: #343a40;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+header {
+    padding: 2px;
+    background-color: #e95420;
+    color: #FF0000;
+    text-align: center;
+}
+
+/* ínicio do código da aba de navegação */
+
+nav ul {
+    list-style: none;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 100px;
+    font-size: 20px;
+    color: #000000;
+
+}
+
+nav ul li {
+    display: inline;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.84) !important; /* Define a cor preta e força a aplicação */
+    font-weight: bold; /* Mantém a negrito */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+/* fim do código de navegação */
+
+/* início do código do carrossel - W3 Schools Slideshow */
+
+.w3-content {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens na tela */
+    align-items: center;
+    position: relative;
+    height: 220px; /* Ajuste conforme necessário */
+    margin-top: 30px;
+}
+
+.mySlides {
+    display: none;
+    width: 400px;  /* Largura fixa */
+    height: 250px; /* Altura fixa */
+    object-fit: cover; /* Evita distorção */
+    align-content: center;
+
+}
+
+.w3-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(0, 0, 0); /* Fundo semi-transparente */
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.w3-display-left {
+    left: 10px; /* Distância da seta esquerda */
+}
+
+.w3-display-right {
+    right: 10px; /* Distância da seta direita */
+}
+
+.w3-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Efeito ao passar o mouse */
+}
+
+form {
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* início rodapé */
+
+footer {
+    background-color: #e95420;
+    padding: 15px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    margin: -17px 0;
+
+}
+footer p {
+    color: #fff;
+    font-size: 18px;
+    margin: 10px;
+    margin-top: -3px;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se necessário) */
+    text-align: center;
+}
+
+.product {
+    margin: 25px;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+
+}
+.product h2 {
+    margin-top: 15px;
+    color: #5a2a1f;
+}
+.product p {
+    font-size: 16px;
+    color: #666;
+    margin: 8px 0;
+}
+.price {
+    font-size: 18px;
+    color: #27ae60;
+    font-weight: bold;
+}
