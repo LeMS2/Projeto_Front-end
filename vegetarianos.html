@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor & Arte</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/united/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" href="https://images.rawpixel.com/dark_image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm01MDNiYXRjaDItZS0wNi5wbmc.png" type="image/png">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon"
+          href="https://images.rawpixel.com/dark_image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm01MDNiYXRjaDItZS0wNi5wbmc.png"
+          type="image/png">
     <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
@@ -44,52 +45,9 @@
             border-radius: 5px;
         }
     </style>
-
-
-
-</head>
-
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="color: #000000">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">
-                        <i class="fa-solid fa-play"></i> Início
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="salgados.html">
-                        <i class="fa-solid fa-burger"></i> Salgados
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="doces.html">
-                        <i class="fa-solid fa-cookie-bite"></i> Doces
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="lanches.html">
-                        <i class="fa-solid fa-utensils"></i> Lanches
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="vegetarianos.html">
-                        <i class="fa-solid fa-seedling"></i> Vegetarianos
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">
-                        <i class="fa-solid fa-address-book"></i> Contato
-                    </a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pedidos.html">
-                            <i class="fa-solid fa-cart-plus"></i> Pedidos
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-
 </head>
 <body>
+
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -106,6 +64,21 @@
     </symbol>
 </svg>
 
+<div id="navbar"></div>
+
+<script>
+    fetch('templates/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+    fetch('templates/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
 <h1>Vegetarianos</h1>
 
 <div class="product">
@@ -113,7 +86,6 @@
     <h2>Hambúrguer</h2>
     <p>Uma explosão de sabor e saúde! Nosso hambúrguer é feito com uma combinação nutritiva de grão-de-bico, aveia e temperos especiais. Acompanha molho especial.</p>
     <p class="price">🔥 Tudo isso por apenas R$ 28,00! Peça agora e experimente!</p>
-    <a href="#" class="buy-btn"><i class="fas fa-cart-plus"></i> Comprar</a>
 </div>
 
 <div class="product">
@@ -121,7 +93,6 @@
     <h2>Coxinha de Jaca</h2>
     <p>A clássica coxinha, agora em uma versão irresistível e 100% vegetal! Massa crocante e recheio suculento de jaca desfiada, temperada no ponto certo para um sabor incrível.</p>
     <p class="price">🔥 Apenas R$ 10,00 a unidade! Peça já a sua!</p>
-    <a href="#" class="buy-btn"><i class="fas fa-cart-plus"></i> Comprar</a>
 </div>
 
 <div class="product">
@@ -129,7 +100,6 @@
     <h2>Nuggets</h2>
     <p>Crocantes por fora e macios por dentro! Nuggets feitos de brócolis e queijo, empanados na medida certa e assados ou fritos para garantir aquele sabor especial.</p>
     <p class="price">🔥 Apenas R$ 19,00 a porção! Peça agora e aproveite!</p>
-    <a href="#" class="buy-btn"><i class="fas fa-cart-plus"></i> Comprar</a>
 </div>
 
 <div class="product">
@@ -137,7 +107,6 @@
     <h2>Bowl de Grãos</h2>
     <p>Uma refeição completa e cheia de nutrientes! Nosso bowl leva quinoa, lentilha, cenoura ralada, pepino, beterraba e um toque especial de molho tahine com limão.</p>
     <p class="price">🔥 Tudo isso por apenas R$ 27,00! Peça agora e sinta o sabor da saúde!</p>
-    <a href="#" class="buy-btn"><i class="fas fa-cart-plus"></i> Comprar</a>
 </div>
 
 <div class="product">
@@ -145,11 +114,10 @@
     <h2>Quiche</h2>
     <p>Massa leve e crocante recheada com um mix de legumes frescos e queijo cremoso. Uma opção deliciosa e equilibrada para qualquer momento do dia!</p>
     <p class="price">🔥 Apenas R$ 21,00 a fatia! Peça agora e se delicie!</p>
-    <a href="#" class="buy-btn"><i class="fas fa-cart-plus"></i> Comprar</a>
 </div>
 
 <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+    <button class="btn btn-bd-primary py-0 dropdown-toggle d-flex align-items-center"
             id="bd-theme"
             type="button"
             aria-expanded="false"
@@ -200,11 +168,7 @@
     </ul>
 </div>
 
-</body>
-
-<footer class="text-center mt-4">
-    <p>&copy; Sabor & Arte, 2025</p>
-</footer>
-
+<footer id="footer"></footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

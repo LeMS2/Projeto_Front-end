@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor & Arte</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/united/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" href="https://images.rawpixel.com/dark_image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm01MDNiYXRjaDItZS0wNi5wbmc.png" type="image/png"
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon"
+          href="https://images.rawpixel.com/dark_image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm01MDNiYXRjaDItZS0wNi5wbmc.png"
+          type="image/png">
     <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
@@ -36,6 +37,7 @@
         .bd-mode-toggle .dropdown-menu .active .bi {
             display: block !important;
         }
+
         /* Estilos para acessibilidade */
         a:focus, button:focus, .buy-btn:focus {
             outline: 3px solid #ff4500;
@@ -44,48 +46,8 @@
         }
     </style>
 </head>
-
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="color: #000000">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">
-                        <i class="fa-solid fa-play"></i> Início
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="salgados.html">
-                        <i class="fa-solid fa-burger"></i> Salgados
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="doces.html">
-                        <i class="fa-solid fa-cookie-bite"></i> Doces
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="lanches.html">
-                        <i class="fa-solid fa-utensils"></i> Lanches
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="vegetarianos.html">
-                        <i class="fa-solid fa-seedling"></i> Vegetarianos
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">
-                        <i class="fa-solid fa-address-book"></i> Contato
-                    </a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pedidos.html">
-                            <i class="fa-solid fa-cart-plus"></i> Pedidos
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-
-</head>
 <body>
+
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -102,6 +64,21 @@
     </symbol>
 </svg>
 
+<div id="navbar"></div>
+
+<script>
+    fetch('templates/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+    fetch('templates/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
 
 <h1>Salgados</h1>
 
@@ -112,7 +89,6 @@
         <br>
         📍 Escolha entre carne, frango, queijo ou a versão especial da casa!</p>
     <p class="price">🔥 Apenas R$ 4,99 cada! (ou leve 3 por R$ 13,99)</p>
-    <a href="#" class="buy-btn"><i class="fas fa-cart-plus"></i> Comprar</a> <!-- Ícone de carrinho de compras -->
 </div>
 
 <div class="product">
@@ -122,7 +98,6 @@
         <br>
         📍 Seja queijo, frango ou carne.</p>
     <p class="price">🔥 Apenas R$ 6,99 cada! (ou leve 2 por R$ 12,99)</p>
-    <a href="#" class="buy-btn"><i class="fas fa-cart-plus"></i> Comprar</a> <!-- Ícone de carrinho de compras -->
 </div>
 
 <div class="product">
@@ -131,7 +106,6 @@
     <p>Sabor incrível e crocante! Nosso pastel assado é feito com uma massa leve e recheado com ingredientes frescos e de qualidade.
         <br>Perfeito para qualquer hora do dia!</p>
     <p class="price">🔥 Experimente agora por apenas R$ 8,00 </p>
-    <a href="#" class="buy-btn"><i class="fas fa-cart-plus"></i> Comprar</a> <!-- Ícone de carrinho de compras -->
 </div>
 
 <div class="product">
@@ -140,7 +114,6 @@
     <p>Uma coxinha sequinha, crocante por fora e recheada com frango desfiado super saboroso!
         <br>Para deixar a experiência ainda melhor, acompanha maionese.</p>
     <p class="price">🔥 Tudo isso por apenas R$8,00! Peça agora e aproveite!</p>
-    <a href="#" class="buy-btn"><i class="fas fa-cart-plus"></i> Comprar</a> <!-- Ícone de carrinho de compras -->
 </div>
 
 <div class="product">
@@ -150,10 +123,10 @@
         <br>
         Acompanhados de um molho especial, ficam ainda mais saborosos!</p>
     <p class="price">🔥 Experimente por apenas R$ 4,00 cada!</p>
-    <a href="#" class="buy-btn"><i class="fas fa-cart-plus"></i> Comprar</a> <!-- Ícone de carrinho de compras -->
 </div>
+
 <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+    <button class="btn btn-bd-primary py-0 dropdown-toggle d-flex align-items-center"
             id="bd-theme"
             type="button"
             aria-expanded="false"
@@ -203,11 +176,8 @@
         </li>
     </ul>
 </div>
+
+<footer id="footer"></footer>
 </body>
-
-<footer class="text-center mt-4">
-    <p>&copy; Sabor & Arte, 2025</p>
-</footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>

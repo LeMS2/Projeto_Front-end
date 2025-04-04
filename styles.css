@@ -115,7 +115,7 @@ footer {
     left: 0;
     right: 0;
     z-index: 999;
-    margin: -5px 0;
+    margin: -17px 0;
 
 }
 footer p {
@@ -160,22 +160,4 @@ footer p {
     font-size: 18px;
     color: #27ae60;
     font-weight: bold;
-}
-.buy-btn {
-    display: inline-block;
-    background-color: #228B22;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-    text-align: center;
-}
-.buy-btn:hover {
-    background-color: #2ecc71;
-}
-.buy-btn i {
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
 }
